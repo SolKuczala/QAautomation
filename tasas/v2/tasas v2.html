@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>tasas v2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">valido</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://iurp.evsis.com/testing/tasas_v2.html<datalist><option>http://iurp.evsis.com/testing/tasas.html</option><option>http://iurp.evsis.com/testing/tasas_v2.html</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td>3000</td>
+</tr>
+<tr><td>click</td><td>id=alumno<datalist><option>id=alumno</option><option>//input[@id='alumno']</option><option>//label/input</option><option>css=#alumno</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=calcular<datalist><option>id=calcular</option><option>//button[@id='calcular']</option><option>//button</option><option>css=#calcular</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>id=resultado<datalist><option>id=resultado</option><option>//div[@id='resultado']</option><option>//div[2]/div</option><option>css=#resultado</option></datalist></td><td>La tasa ofrecida es 6%</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">valor limite</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://iurp.evsis.com/testing/tasas_v2.html<datalist><option>http://iurp.evsis.com/testing/tasas.html</option><option>http://iurp.evsis.com/testing/tasas_v2.html</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td>-1</td>
+</tr>
+<tr><td>click</td><td>id=calcular<datalist><option>id=calcular</option><option>//button[@id='calcular']</option><option>//button</option><option>css=#calcular</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAlert</td><td>El monto debe ser mayor a cero<datalist><option>El monto debe ser mayor a cero</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">invalido</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://iurp.evsis.com/testing/tasas_v2.html<datalist><option>http://iurp.evsis.com/testing/tasas.html</option><option>http://iurp.evsis.com/testing/tasas_v2.html</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td>0</td>
+</tr>
+<tr><td>click</td><td>id=calcular<datalist><option>id=calcular</option><option>//button[@id='calcular']</option><option>//button</option><option>css=#calcular</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAlert</td><td>El monto debe ser mayor a cero<datalist><option>El monto debe ser mayor a cero</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">invalido 2</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://iurp.evsis.com/testing/tasas_v2.html<datalist><option>http://iurp.evsis.com/testing/tasas.html</option><option>http://iurp.evsis.com/testing/tasas_v2.html</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td>asd</td>
+</tr>
+<tr><td>click</td><td>id=alumno<datalist><option>id=alumno</option><option>//input[@id='alumno']</option><option>//label/input</option><option>css=#alumno</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=calcular<datalist><option>id=calcular</option><option>//button[@id='calcular']</option><option>//button</option><option>css=#calcular</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAlert</td><td>El monto debe ser un valor numérico<datalist><option>El monto debe ser un valor numérico</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">no alumno 3%</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://iurp.evsis.com/testing/tasas_v2.html<datalist><option>http://iurp.evsis.com/testing/tasas.html?</option><option>http://iurp.evsis.com/testing/tasas_v2.html</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td>1</td>
+</tr>
+<tr><td>click</td><td>id=calcular<datalist><option>id=calcular</option><option>//button[@id='calcular']</option><option>//button</option><option>css=#calcular</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>id=resultado<datalist><option>id=resultado</option><option>//div[@id='resultado']</option><option>//div[2]/div</option><option>css=#resultado</option></datalist></td><td>La tasa ofrecida es 3%</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">no alumno 5%</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://iurp.evsis.com/testing/tasas_v2.html<datalist><option>http://iurp.evsis.com/testing/tasas.html?</option><option>http://iurp.evsis.com/testing/tasas_v2.html</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td>1000</td>
+</tr>
+<tr><td>click</td><td>id=calcular<datalist><option>id=calcular</option><option>//button[@id='calcular']</option><option>//button</option><option>css=#calcular</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>id=resultado<datalist><option>id=resultado</option><option>//div[@id='resultado']</option><option>//div[2]/div</option><option>css=#resultado</option></datalist></td><td>La tasa ofrecida es 5%</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">no alumno 7%</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://iurp.evsis.com/testing/tasas_v2.html<datalist><option>http://iurp.evsis.com/testing/tasas.html?</option><option>http://iurp.evsis.com/testing/tasas_v2.html</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td>10000</td>
+</tr>
+<tr><td>click</td><td>id=calcular<datalist><option>id=calcular</option><option>//button[@id='calcular']</option><option>//button</option><option>css=#calcular</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>id=resultado<datalist><option>id=resultado</option><option>//div[@id='resultado']</option><option>//div[2]/div</option><option>css=#resultado</option></datalist></td><td>La tasa ofrecida es 7%</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">alumno 4%</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://iurp.evsis.com/testing/tasas_v2.html<datalist><option>http://iurp.evsis.com/testing/tasas.html?</option><option>http://iurp.evsis.com/testing/tasas_v2.html</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td>1</td>
+</tr>
+<tr><td>click</td><td>id=alumno<datalist><option>id=alumno</option><option>//input[@id='alumno']</option><option>//label/input</option><option>css=#alumno</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=calcular<datalist><option>id=calcular</option><option>//button[@id='calcular']</option><option>//button</option><option>css=#calcular</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>id=resultado<datalist><option>id=resultado</option><option>//div[@id='resultado']</option><option>//div[2]/div</option><option>css=#resultado</option></datalist></td><td>La tasa ofrecida es 4%</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">alumno 6%</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://iurp.evsis.com/testing/tasas_v2.html<datalist><option>http://iurp.evsis.com/testing/tasas.html?</option><option>http://iurp.evsis.com/testing/tasas_v2.html</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td>1000</td>
+</tr>
+<tr><td>click</td><td>id=alumno<datalist><option>id=alumno</option><option>//input[@id='alumno']</option><option>//label/input</option><option>css=#alumno</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=calcular<datalist><option>id=calcular</option><option>//button[@id='calcular']</option><option>//button</option><option>css=#calcular</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>id=resultado<datalist><option>id=resultado</option><option>//div[@id='resultado']</option><option>//div[2]/div</option><option>css=#resultado</option></datalist></td><td>La tasa ofrecida es 6%</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">alumno 8%</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://iurp.evsis.com/testing/tasas_v2.html<datalist><option>http://iurp.evsis.com/testing/tasas.html?</option><option>http://iurp.evsis.com/testing/tasas_v2.html</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=monto<datalist><option>id=monto</option><option>//input[@id='monto']</option><option>//input</option><option>css=#monto</option></datalist></td><td>10000</td>
+</tr>
+<tr><td>click</td><td>id=alumno<datalist><option>id=alumno</option><option>//input[@id='alumno']</option><option>//label/input</option><option>css=#alumno</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=calcular<datalist><option>id=calcular</option><option>//button[@id='calcular']</option><option>//button</option><option>css=#calcular</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>id=resultado<datalist><option>id=resultado</option><option>//div[@id='resultado']</option><option>//div[2]/div</option><option>css=#resultado</option></datalist></td><td>La tasa ofrecida es 8%</td>
+</tr>
+</tbody></table>
+</body>
+</html>
